@@ -1,3 +1,4 @@
+````md
 # 🧠 AI First Aid
 
 AI assistant for analyzing real-world images (e.g., electrical panels) and providing clear, safe, actionable guidance.
@@ -10,7 +11,7 @@ The system is designed for non-technical users and works fully locally using a m
 
 ```text
 AI-First-Aid-Mobile (📱) → AI-First-Aid (💻 Backend + LLM) → Result
-```
+````
 
 * 📱 Mobile (AI-First-Aid-Mobile)
 
@@ -71,8 +72,20 @@ AI-First-Aid-Mobile/
 ## 🤖 AI Stack
 
 * Local runtime: **Ollama**
+* Model: **Gemma (`gemma4:e2b`)**
 * Multimodal LLM (image + text)
 * Fully local processing (no external APIs)
+
+### Model Details
+
+The system uses the **Gemma 4 multimodal model (`gemma4:e2b`)** to analyze images and generate structured responses.
+
+The model:
+
+* processes both image and text input
+* identifies objects and context in the scene
+* generates human-readable explanations
+* outputs structured JSON (via prompt constraints)
 
 ---
 
@@ -125,18 +138,37 @@ AI-First-Aid-Mobile:
 
 ## 🚀 Next Step
 
-👉 Test system on computer **outside browser (no Swagger / Chrome)**
+👉 Test system on computer outside browser (no Swagger / Chrome)
 👉 Then connect stable flow to mobile app
 
 ---
 
 ## 🎯 Goal
 
-Create a real assistant that:
+To create an assistant that not only analyzes images, but also helps a person **stay calm in a stressful situation**.
 
-* understands images
-* reads labels
-* identifies problems
-* gives precise, safe instructions
+The system:
 
+* quickly explains what is happening  
+* reduces uncertainty  
+* helps prevent panic  
+* provides simple and safe actions  
 
+Main objective:
+
+> At the moment when a person does not understand what is happening and begins to panic —  
+> give them clarity, a sense of control, and the first correct action.
+
+## 🔗 Repositories
+
+This project consists of two repositories:
+
+- **AI-First-Aid (Backend)**  
+  https://github.com/shibumi2906/AI-First-Aid
+
+- **AI-First-Aid-Mobile (Mobile App)**  
+  https://github.com/shibumi2906/Ai-first-aid-mobile
+
+Architecture:
+
+AI-First-Aid-Mobile (📱) → AI-First-Aid (💻 Backend + AI) → Result
